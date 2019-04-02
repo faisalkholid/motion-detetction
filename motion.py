@@ -1,6 +1,4 @@
 import sys
-from _socket import gaierror
-
 import cv2
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtCore import QTimer
@@ -19,6 +17,7 @@ class skripsi(QtWidgets.QMainWindow):
         self.btnDetec.toggled.connect(self.detec_webcam_motion)
         self.motion_Enabled=False
 
+        # MATIKAN TOMBOL REFERENCE JIKA PAKAI UI DESIGN 2
         # self.btnRefer.clicked.connect(self.set_motion_image)
         self.motionFrame=None
 
@@ -30,6 +29,7 @@ class skripsi(QtWidgets.QMainWindow):
             self.motion_Enabled = False
             self.btnDetec.setText("Detec Motion")
 
+    # HIDUPKAN KODING KALAU PAKAI DESIGN UI 2 DAN HIDUPKAN JUGA DI UPDATE FRAME.
     def gray(self,ret):
         gray = cv2.cvtColor(self.image.copy(), cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (21, 21), 0)
@@ -37,13 +37,11 @@ class skripsi(QtWidgets.QMainWindow):
         self.arrayEdit.setText(str(gray))
         self.displayImage(self.motionFrame, 2)
 
-    # def set_motion_image(self):
-    #     gray = cv2.cvtColor(self.image.copy(),cv2.COLOR_BGR2GRAY)
-    #     gray = cv2.GaussianBlur(gray,(21,21),0)
-    #     self.motionFrame=gray
-    #     thresh = cv2.threshold(gray, 40, 255, cv2.THRESH_BINARY)[1]
-    #     self.displayImage(thresh, 4)
-    #     self.displayImage(self.motionFrame,3)
+    def set_motion_image(self):
+        gray = cv2.cvtColor(self.image.copy(),cv2.COLOR_BGR2GRAY)
+        gray = cv2.GaussianBlur(gray,(21,21),0)
+        self.motionFrame=gray
+        self.displayImage(self.motionFrame,3)
 
     def load_image(self):
         self.capture = cv2.VideoCapture(0)
@@ -69,11 +67,10 @@ class skripsi(QtWidgets.QMainWindow):
         self.text = "No motion"
         gray = cv2.cvtColor(input_image,cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray,(21,21),0)
-        self.displayImage(self.motionFrame, 2)
+
         framediff=cv2.absdiff(self.motionFrame,gray)
         thresh = cv2.threshold(framediff,40,255,cv2.THRESH_BINARY)[1]
-        self.displayImage(thresh,5)
-        # self.treshText.setText(str())
+        self.displayImage(thresh,4)
         self.diffLabel.setText(str(framediff))
 
         thresh = cv2.dilate(thresh,None,iterations=5)
@@ -129,9 +126,6 @@ class skripsi(QtWidgets.QMainWindow):
         if window == 4:
             self.thresLabel.setPixmap(QPixmap.fromImage(outImage))
             self.thresLabel.setScaledContents(True)
-        if window == 5:
-            self.currLabel.setPixmap(QPixmap.fromImage(outImage))
-            self.currLabel.setScaledContents(True)
 
 
 if __name__ == '__main__':
