@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>980</width>
-    <height>605</height>
+    <width>1010</width>
+    <height>554</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,11 +33,17 @@
    <widget class="QPushButton" name="btnRef">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>370</y>
+      <x>670</x>
+      <y>440</y>
       <width>161</width>
       <height>33</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Start</string>
@@ -61,7 +67,7 @@
      <rect>
       <x>340</x>
       <y>40</y>
-      <width>331</width>
+      <width>321</width>
       <height>221</height>
      </rect>
     </property>
@@ -88,8 +94,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>20</y>
+      <x>340</x>
+      <y>270</y>
       <width>141</width>
       <height>17</height>
      </rect>
@@ -101,10 +107,10 @@
    <widget class="QTextEdit" name="arrayEdit">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>40</y>
-      <width>291</width>
-      <height>221</height>
+      <x>340</x>
+      <y>290</y>
+      <width>321</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -114,7 +120,7 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>670</x>
       <y>270</y>
       <width>111</width>
       <height>17</height>
@@ -127,10 +133,10 @@
    <widget class="QTextEdit" name="diffLabel">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>670</x>
       <y>290</y>
-      <width>291</width>
-      <height>221</height>
+      <width>321</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -140,81 +146,63 @@
    <widget class="QPushButton" name="btnStop">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>370</y>
+      <x>830</x>
+      <y>440</y>
       <width>161</width>
       <height>33</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Stop</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnRefer">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>400</y>
-      <width>161</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Refer Image</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnDetec">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>400</y>
-      <width>161</width>
+      <x>670</x>
+      <y>480</y>
+      <width>321</width>
       <height>33</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Detec Motion</string>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
-   </widget>
-   <widget class="QLabel" name="referLabel">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>420</y>
-      <width>161</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
+    <property name="tabletTracking">
+     <bool>false</bool>
     </property>
     <property name="text">
-     <string/>
+     <string>Detection</string>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>400</y>
-      <width>111</width>
-      <height>17</height>
-     </rect>
+    <property name="autoDefault">
+     <bool>false</bool>
     </property>
-    <property name="text">
-     <string>REFERENCE IMAGE</string>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QTextEdit" name="warnText">
     <property name="enabled">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>290</y>
       <width>321</width>
-      <height>71</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -224,6 +212,12 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -241,6 +235,12 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
      <string>WARNING !!!</string>
     </property>
@@ -248,10 +248,10 @@
    <widget class="QLabel" name="thresLabel">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>290</y>
-      <width>161</width>
-      <height>101</height>
+      <x>670</x>
+      <y>40</y>
+      <width>321</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -264,43 +264,101 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>270</y>
-      <width>171</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>THRESH CURRENT FRAME</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="currLabel">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>290</y>
-      <width>161</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>270</y>
+      <x>670</x>
+      <y>20</y>
       <width>111</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>THRESH REFERENCE IMAGE</string>
+     <string>THRESHOLDING</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineTh">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>131</width>
+      <height>33</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>490</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>INPUT THRESHOLDING</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineFrame">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>360</y>
+      <width>113</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineFps">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>113</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>31</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FPS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TOTAL FRAME</string>
     </property>
    </widget>
   </widget>
